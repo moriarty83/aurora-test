@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce6e2bb9fed1c8a4eb0cf8dcf95da5f6, type: 3}
+  m_Name: New Behaviour Tree
+  m_EditorClassIdentifier: 
+  callType: 3
+  name: Behaviour Tree
+  singleCall: 0
+  description: 
+  rootNode: {fileID: 5850047102014675138}
+  variables:
+    keys: []
+    values: []
+  nodes:
+  - {fileID: 5850047102014675138}
+  - {fileID: 1871135832954363946}
+  groups: []
+  references:
+    version: 1
+--- !u!114 &1871135832954363946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20377f17938920d47bd28a36c0e7c968, type: 3}
+  m_Name: RaycastShootNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 75, y: -49}
+  nodeDescription: 
+  singleCall: 0
+  firePointName: FIRE POINT
+  damage: 5
+  attackState:
+    name: Fire
+    layer: 0
+    fixedTime: 0.1
+    nameHash: -118708495
+  rpm: 800
+  clipCapacity: 30
+  reloadState:
+    name: Reload
+    layer: 0
+    fixedTime: 0.1
+    nameHash: -1525363869
+  reloadTime: 3
+  fireSound: {fileID: 0}
+  reloadSound: {fileID: 0}
+  fireEffectName: 
+  targetVariable: 
+  deviation: 0
+--- !u!114 &5850047102014675138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90698019c98cc8741ab286056b639ebe, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 0, y: 0}
+  nodeDescription: 
+  child: {fileID: 1871135832954363946}

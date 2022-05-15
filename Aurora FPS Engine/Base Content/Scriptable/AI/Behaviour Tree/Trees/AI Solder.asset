@@ -1,0 +1,573 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8495988551879297904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c55acdc9e3310904f88145dd4881167d, type: 3}
+  m_Name: SetBoolNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 148, y: 760}
+  nodeDescription: 
+  singleCall: 0
+  boolVariable: Local/saw player
+  value: 1
+--- !u!114 &-8285711567021836331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20377f17938920d47bd28a36c0e7c968, type: 3}
+  m_Name: RaycastShootNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 368, y: 570}
+  nodeDescription: 
+  singleCall: 0
+  firePointName: FIRE POINT
+  damage: 20
+  attackState:
+    name: Fire
+    layer: 1
+    fixedTime: 0.1
+    nameHash: -118708495
+  rpm: 600
+  clipCapacity: 30
+  reloadState:
+    name: Reload
+    layer: 1
+    fixedTime: 0.1
+    nameHash: -1525363869
+  reloadTime: 3
+  fireSound: {fileID: 8300000, guid: 80fcb1a77cae6c0498a4ab521473acb6, type: 3}
+  reloadSound: {fileID: 8300000, guid: c12234d355e694fbaaa592fd90d7afc5, type: 3}
+  fireEffectName: Muzzle Flash 3D
+  targetVariable: Local/transform
+  deviation: 0.3
+--- !u!114 &-7976224424004563561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f161257e95eaffd4eb4a33108ed121b7, type: 3}
+  m_Name: AgentSetDestinationNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 1908, y: 950}
+  nodeDescription: 
+  singleCall: 0
+  speedVariable: 
+  speed: 5
+  stoppingDistanceVariable: 
+  stoppingDistance: 0.1
+  updateRotationVariable: 
+  updateRotation: 1
+  accelerationVariable: 
+  acceleration: 40
+  toleranceVariable: 
+  tolerance: 1
+  targetType: 1
+  transformVariable: 
+  positionVariable: Local/player last position
+  position: {x: 0, y: 0, z: 0}
+  speedToggle: 0
+  stoppingDistanceToggle: 0
+  updateRotationToggle: 0
+  accelerationToggle: 0
+  toleranceToggle: 0
+  positionToggle: 1
+--- !u!114 &-7086971707783951166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90698019c98cc8741ab286056b639ebe, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 1138, y: 0}
+  nodeDescription: 
+  child: {fileID: 1640483077791586013}
+--- !u!114 &-2724111957763128104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85263108a8bd9e0469feac3580755ae9, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 2128, y: 950}
+  nodeDescription: 
+  singleCall: 0
+  durationVariable: 
+  duration: 1
+  durationToggle: 0
+--- !u!114 &-2225261375979323313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30495fde4c786f845a022cb0e439567e, type: 3}
+  m_Name: ConditionNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 588, y: 570}
+  nodeDescription: 
+  singleCall: 0
+  booleanVariable: Local/taken damage
+  boolean: 0
+  resetOnSuccess: 1
+  booleanToggle: 1
+--- !u!114 &-2149820692221747356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a75faf84fc137479c46fcb339e3299, type: 3}
+  m_Name: BehaviourNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 2348, y: 760}
+  nodeDescription: 
+  singleCall: 0
+  behaviourTree: {fileID: 11400000, guid: f56deea7d9018644c9d57a146b4f873d, type: 2}
+--- !u!114 &-1193441354618384052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 786afb1f139f4f740a49b05bbdd5f38b, type: 3}
+  m_Name: RepeatUntilSuccessNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 1358, y: 570}
+  nodeDescription: 
+  child: {fileID: 8591842346941083860}
+--- !u!114 &-813004582764184903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d3af75571e6a241ad38c1e55248de6, type: 3}
+  m_Name: RotateTowardsNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 1028, y: 570}
+  nodeDescription: 
+  singleCall: 0
+  rotationSpeedVariable: 
+  rotationSpeed: 5
+  targetType: 1
+  transformVariable: 
+  pointVariable: Local/point
+  point: {x: 0, y: 0, z: 0}
+  rotationSpeedToggle: 0
+  pointToggle: 1
+--- !u!114 &-405775875853660389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ecbd642284b504ca1789fb521bbe87, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 808, y: 380}
+  nodeDescription: 
+  children:
+  - {fileID: -2225261375979323313}
+  - {fileID: 6258503783040214358}
+  - {fileID: -813004582764184903}
+--- !u!114 &-40578737252629530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ecbd642284b504ca1789fb521bbe87, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 1908, y: 760}
+  nodeDescription: 
+  children:
+  - {fileID: 8037743961906297428}
+  - {fileID: -7976224424004563561}
+  - {fileID: -2724111957763128104}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce6e2bb9fed1c8a4eb0cf8dcf95da5f6, type: 3}
+  m_Name: AI Solder
+  m_EditorClassIdentifier: 
+  callType: 3
+  name: AI Solder
+  singleCall: 0
+  description: 
+  rootNode: {fileID: -7086971707783951166}
+  variables:
+    keys:
+    - transform
+    - taken damage
+    - point
+    - saw player
+    - player last position
+    values:
+    - id: 0
+    - id: 1
+    - id: 2
+    - id: 3
+    - id: 4
+  nodes:
+  - {fileID: -7086971707783951166}
+  - {fileID: 1640483077791586013}
+  - {fileID: 3210653451575832756}
+  - {fileID: 398753388409447158}
+  - {fileID: 1205927253820749200}
+  - {fileID: 7796950443550233514}
+  - {fileID: -1193441354618384052}
+  - {fileID: -2149820692221747356}
+  - {fileID: -8285711567021836331}
+  - {fileID: 2854767047504618957}
+  - {fileID: 8591842346941083860}
+  - {fileID: -405775875853660389}
+  - {fileID: 1484852550945441159}
+  - {fileID: -2225261375979323313}
+  - {fileID: -813004582764184903}
+  - {fileID: 6258503783040214358}
+  - {fileID: 8749322441877370566}
+  - {fileID: 7491465750707539747}
+  - {fileID: -40578737252629530}
+  - {fileID: 8037743961906297428}
+  - {fileID: -7976224424004563561}
+  - {fileID: -2724111957763128104}
+  - {fileID: -8495988551879297904}
+  groups: []
+  references:
+    version: 1
+    00000000:
+      type: {class: TransformVariable, ns: AuroraFPSRuntime.AIModules.BehaviourTree.Variables,
+        asm: Assembly-CSharp}
+      data:
+        value: {fileID: 0}
+    00000001:
+      type: {class: BoolVariable, ns: AuroraFPSRuntime.AIModules.BehaviourTree.Variables,
+        asm: Assembly-CSharp}
+      data:
+        value: 0
+    00000002:
+      type: {class: Vector3Variable, ns: AuroraFPSRuntime.AIModules.BehaviourTree.Variables,
+        asm: Assembly-CSharp}
+      data:
+        value: {x: 0, y: 0, z: 0}
+    00000003:
+      type: {class: BoolVariable, ns: AuroraFPSRuntime.AIModules.BehaviourTree.Variables,
+        asm: Assembly-CSharp}
+      data:
+        value: 0
+    00000004:
+      type: {class: Vector3Variable, ns: AuroraFPSRuntime.AIModules.BehaviourTree.Variables,
+        asm: Assembly-CSharp}
+      data:
+        value: {x: 0, y: 0, z: 0}
+--- !u!114 &398753388409447158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97eb788b41d48343b8d55b23b7a89fe, type: 3}
+  m_Name: ParallelCompleteNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 148, y: 380}
+  nodeDescription: 
+  children:
+  - {fileID: 1205927253820749200}
+  - {fileID: 8749322441877370566}
+  - {fileID: -8285711567021836331}
+--- !u!114 &1205927253820749200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a424b4e9cc997c045834c8fe5c2597c2, type: 3}
+  m_Name: RepeatUntilFailureNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: -72, y: 570}
+  nodeDescription: 
+  child: {fileID: 3210653451575832756}
+--- !u!114 &1484852550945441159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271f9c8906efdd549a857dfc6faa9b39, type: 3}
+  m_Name: OnTakeDamageNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 1468, y: 950}
+  nodeDescription: 
+  singleCall: 0
+  storedVariable: Local/taken damage
+--- !u!114 &1640483077791586013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1770628119ce54980deb844516c178, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 1138, y: 160.84}
+  nodeDescription: 
+  children:
+  - {fileID: 398753388409447158}
+  - {fileID: -405775875853660389}
+  - {fileID: 7796950443550233514}
+--- !u!114 &2854767047504618957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baafb277e7e6f0d419b920929e5bee47, type: 3}
+  m_Name: SeeObjectNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 1248, y: 950}
+  nodeDescription: 
+  singleCall: 0
+  objectTag: Player
+  fovVariable: 
+  fov: 90
+  heightOffsetVariable: 
+  heightOffset: 1.635
+  maxDistanceVariable: 
+  maxDistance: 10
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 2049
+  targetVariable: 
+  lastPositionVariable: 
+  fovToggle: 0
+  heightOffsetToggle: 0
+  maxDistanceToggle: 0
+--- !u!114 &3210653451575832756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baafb277e7e6f0d419b920929e5bee47, type: 3}
+  m_Name: SeeObjectNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: -72, y: 760}
+  nodeDescription: 
+  singleCall: 0
+  objectTag: Player
+  fovVariable: 
+  fov: 90
+  heightOffsetVariable: 
+  heightOffset: 1.635
+  maxDistanceVariable: 
+  maxDistance: 10
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 2049
+  targetVariable: Local/transform
+  lastPositionVariable: Local/player last position
+  fovToggle: 0
+  heightOffsetToggle: 0
+  maxDistanceToggle: 0
+--- !u!114 &6258503783040214358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff8ed4d79f0da143914794cd837edc2, type: 3}
+  m_Name: RandomPositionNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 808, y: 570}
+  nodeDescription: 
+  singleCall: 0
+  positionType: 1
+  relativePositionVariable: Local/point
+  relativePosition: {x: 0, y: 0, z: 0}
+  radiusVariable: 
+  radius: 1
+  storageVariable: Local/point
+  relativePositionToggle: 1
+  radiusToggle: 0
+--- !u!114 &7491465750707539747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1770628119ce54980deb844516c178, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 2018, y: 570}
+  nodeDescription: 
+  children:
+  - {fileID: -40578737252629530}
+  - {fileID: -2149820692221747356}
+--- !u!114 &7796950443550233514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97eb788b41d48343b8d55b23b7a89fe, type: 3}
+  m_Name: ParallelCompleteNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 1798, y: 380}
+  nodeDescription: 
+  children:
+  - {fileID: -1193441354618384052}
+  - {fileID: 7491465750707539747}
+--- !u!114 &8037743961906297428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30495fde4c786f845a022cb0e439567e, type: 3}
+  m_Name: ConditionNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 1688, y: 950}
+  nodeDescription: 
+  singleCall: 0
+  booleanVariable: Local/saw player
+  boolean: 0
+  resetOnSuccess: 1
+  booleanToggle: 1
+--- !u!114 &8591842346941083860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1770628119ce54980deb844516c178, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 1358, y: 760}
+  nodeDescription: 
+  children:
+  - {fileID: 2854767047504618957}
+  - {fileID: 1484852550945441159}
+--- !u!114 &8749322441877370566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc754003628a1d247a2d36ea6f202821, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  mute: 0
+  nodePosition: {x: 148, y: 570}
+  nodeDescription: 
+  child: {fileID: -8495988551879297904}
+  fixedCount: 0
+  count: 0
